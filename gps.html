@@ -269,7 +269,7 @@ header{display:flex;align-items:center;justify-content:space-between;margin-bott
 const TB_HOST = "https://thingsboard.cloud";
 const TB_USER = "junglemungle64@gmail.com";
 const TB_PASS = "liftkaradey";
-const DEVICE_ID = "bddbb0f0-1440-11f1-840f-e9bf6f45218f";
+const DEVICE_ID = "b5fca8f0-0a4d-11f1-90fa-e1d5a16c5c86";
 const REFRESH_INTERVAL = 10000;
 
 // Nordic UART Service UUIDs (standard ESP32 BLE Serial)
@@ -421,7 +421,7 @@ async function connectBLE() {
 
   try {
     bleDevice = await navigator.bluetooth.requestDevice({
-      filters: [{ services: [NUS_SERVICE] }],
+      filters: [{ name: "MyPerro" }],
       optionalServices: [NUS_SERVICE]
     });
 
